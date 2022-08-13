@@ -11,6 +11,9 @@ const app = express()
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 
+//to access css and images 
+app.use('/public', express.static('public'));
+
 app.set("view engine","ejs")
 
 const PORT = process.env.PORT || 3000
@@ -20,7 +23,6 @@ res.render('HOME',{
     key:PUBLISHABLE_KEY
 })
 })
-
 
 app.post('/payment',(req,res) =>{
     stripe.customers.create({

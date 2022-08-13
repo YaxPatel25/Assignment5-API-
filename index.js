@@ -8,41 +8,43 @@ const stripe = require('stripe')(SECRET_KEY)
 const app = express()
 
 // middleweaer
-app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-app.set("view engine","ejs")
+//to access css and images 
+app.use('/public', express.static('public'));
 
-const PORT = process.env.PORT || 3000
+app.set("view engine", "ejs")
 
-app.get('/',(req,res) => {
-res.render('HOME',{
-    key:PUBLISHABLE_KEY
+const PORT = process.env.PORT || 3001
+
+app.get('/', (req, res) => {
+    res.render('HOME', {
+        key: PUBLISHABLE_KEY
+    })
 })
-})
 
-
-app.post('/payment',(req,res) =>{
+app.post('/payment', (req, res) => {
     stripe.customers.create({
-        email:req.body.stripeEmail,
-        source:req.body.stripeToken,
+        email: req.body.stripeEmail,
+        source: req.body.stripeToken,
         name: 'Assignment_5',
-        address:{
+        address: {
             line1: '123,eglinton edghill',
             postal_code: 'mnx12d',
-            country:'Canada'
-        } 
-    }).then((customer) =>{
+            country: 'Canada'
+        }
+    }).then((customer) => {
         return stripe.charges.create(
             {
-                amount : 1000,
-                description:'Assignment_5',
+                amount: 1000,
+                description: 'Assignment_5',
                 currency: 'USD',
                 customer: customer.id
             })
-    }).then((charge)=>{
+    }).then((charge) => {
         console.log(charge)
-         res.send("Success")
+        res.send("Success")
     }).catch((err) => {
         res.send(err)
     })

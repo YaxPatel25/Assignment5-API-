@@ -1,18 +1,196 @@
 <!DOCTYPE html>
-<html>
-    <title>Payment</title>
+<htmllang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Box icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+        <!-- Custom StyleSheet -->
+        <link rel="stylesheet" href="../public/assets/styles.css" type="text/css" />
+        <title>Products</title>
+    </head>
+
     <body>
-        <h3>welcome</h3>
-        <form action="payment" method="post">
-            <script
-                src="//checkout.stripe.com/v2/checkout.js"
-                class = "stripe-button"
-                data-key = "<%= key %>"
-                data-currency="cad"
-                data-amount="1000"
-                data-name="Api and Frameworks"
-                data-locale="auto">
-            </script>
-        </form>
+
+        <div class="container" style="padding-top: 40px;text-align: center;font-size: x-large;">
+            <h1>Assignment 4- Mobile API and Framework</h1>
+            <h2>By - Technotuners</h2>
+
+        </div>
+        <section class="section all-products" id="products">
+            <div class="top container">
+                <h1>All Products</h1>
+            </div>
+            <div class="product-center container">
+                <div class="product-item">
+                    <div class="overlay">
+                        <a href="" class="product-thumb">
+                            <img src="../public/images/product-7.jpg" alt="" />
+                        </a>
+                        <span class="discount">20%</span>
+
+                    </div>
+                    <div class="product-info">
+                        <span>MEN'S CLOTHES</span>
+
+                        <a href="">Men’s Shirt</a>
+                        <h4>$15</h4>
+                        <h5 id="remove0" style="background-color: yellow;font-size:16px;cursor: pointer;">Remove the
+                            item <span id="num0"></span></h5>
+                    </div>
+                    <ul class="icons">
+
+                        <li><i id="cart1" class="bx bx-cart"></i></li>
+                    </ul>
+                </div>
+                <div class="product-item">
+                    <div class="overlay">
+                        <a href="" class="product-thumb">
+                            <img src="../public/images/product-2.jpg" alt="" />
+                        </a>
+                        <span class="discount">15%</span>
+                    </div>
+                    <div class="product-info">
+                        <span>MEN'S CLOTHES</span>
+                        <a href="">Cool School Bag</a>
+                        <h4>$22</h4>
+                        <h5 id="remove1" style="background-color: yellow;font-size:16px;cursor: pointer;">Remove the
+                            item <span id="num1"></span></h5>
+                    </div>
+                    <ul class="icons">
+
+                        <li><i id="cart2" class="bx bx-cart"></i></li>
+                    </ul>
+                </div>
+                <div class="product-item">
+                    <div class="overlay">
+                        <a href="" class="product-thumb">
+                            <img src="../public/images/product-3.jpeg" alt="" />
+                        </a>
+                        <span class="discount">10%</span>
+
+                    </div>
+                    <div class="product-info">
+                        <span>WOMEN'S CLOTHES</span>
+                        <a href="">Side Bag</a>
+                        <h4>$450</h4>
+                        <h5 id="remove2" style="background-color: yellow;font-size:16px;cursor: pointer;">Remove the
+                            item <span id="num2"></span></h5>
+                    </div>
+                    <ul class="icons">
+
+                        <li><i id="cart3" class="bx bx-cart"></i></li>
+                    </ul>
+                </div>
+                <div class="product-item">
+                    <div class="overlay">
+                        <a href="" class="product-thumb">
+                            <img src="../public/images/product-4.jpeg" alt="" />
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span>MEN'S CLOTHES</span>
+                        <a href="">Red T-Shirt</a>
+                        <h4>$15</h4>
+                        <h5 id="remove3" style="background-color: yellow;font-size:16px;cursor: pointer;">Remove the
+                            item <span id="num3"></span></h5>
+                    </div>
+                    <ul class="icons">
+                        <li><i id="cart4" class="bx bx-cart"></i></li>
+                    </ul>
+                </div>
+                <div class="product-item">
+                    <div class="overlay">
+                        <a href="" class="product-thumb">
+                            <img src="../public/images/product-5.webp" alt="" />
+                        </a>
+                        <span class="discount">10%</span>
+                    </div>
+                    <div class="product-info">
+                        <span>MEN'S CLOTHES</span>
+                        <a href="">Black T-shirt</a>
+                        <h4>$15</h4>
+                        <h5 id="remove4" style="background-color: yellow;font-size:16px;cursor: pointer;">Remove the
+                            item <span id="num4"></span></h5>
+                    </div>
+                    <ul class="icons">
+
+                        <li><i id="cart5" class="bx bx-cart"></i></li>
+                    </ul>
+                </div>
+                <div class="product-item">
+                    <div class="overlay">
+                        <a href="" class="product-thumb">
+                            <img src="../public/images/product-6.jpeg" alt="" />
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span>MEN'S CLOTHES</span>
+                        <a href="">Cargo Half Pant</a>
+                        <h4>$45</h4>
+                        <h5 id="remove5" style="background-color: #1275ff;color:white;font-size:16px;cursor: pointer;">
+                            Remove the
+                            item <span id="num5"></span></h5>
+                    </div>
+                    <ul class="icons">
+
+                        <li><i id="cart6" class="bx bx-cart"></i></li>
+                    </ul>
+                </div>
+                <div class="product-item">
+                    <div class="overlay">
+                        <a href="" class="product-thumb">
+                            <img src="../public/images/product-1.webp" alt="" />
+                        </a>
+                        <span class="discount">7%</span>
+                    </div>
+                    <div class="product-info">
+                        <span>MEN'S CLOTHES</span>
+                        <a href="">Unisex hoodie</a>
+                        <h4>$115</h4>
+                        <h5 id="remove6" style="background-color: yellow;font-size:16px;cursor: pointer;">Remove the
+                            item <span id="num6"></span></h5>
+                    </div>
+                    <ul class="icons">
+
+                        <li><i id="cart7" class="bx bx-cart"></i></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+        <div class="container">
+            <h3 class="total-price">You have to pay Total Amount : <span id="totalAmount">0</span></h3>
+        </div>
+        <div id="hideContent">
+
+            <form class="total-price container" action="payment" method="post">
+                <div class="col-lg-5">
+
+                    <script src="//checkout.stripe.com/v2/checkout.js" class="stripe-button" style="padding-top: 20px;"
+                        data-key="<%= key %>" data-currency="cad" data-name="Stripe Payment" data-locale="auto">
+                        </script>
+                </div>
+            </form>
+        </div>
+
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="row">
+                <div class="col d-flex">
+                    <span><i class="bx bxl-facebook-square"></i></span>
+                    <span><i class="bx bxl-instagram-alt"></i></span>
+                    <span><i class="bx bxl-github"></i></span>
+                    <span><i class="bx bxl-twitter"></i></span>
+                </div>
+            </div>
+        </footer>
+
+        <script src='../public/assets/func.js' type='text/javascript'></script>
     </body>
-</html>
+
+
+    </html>

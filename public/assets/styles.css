@@ -10,6 +10,7 @@
   --grey2: #e9d7d3;
 }
 
+<<<<<<< HEAD
 .stripe-button-el {
 
   background-image: none;
@@ -21,6 +22,8 @@
   padding: 40px
 }
 
+=======
+>>>>>>> 0a9da36987bf80064d28cbc82789b7d9acbbe130
 /* Basic Reset */
 *,
 *::before,
@@ -309,7 +312,10 @@ Hero Media Query
     left: 0;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0a9da36987bf80064d28cbc82789b7d9acbbe130
 @media only screen and (max-width: 999px) {
   .glide__slide--active .left {
     top: 15%;
@@ -346,7 +352,10 @@ Hero Media Query
   .hero .left span {
     font-size: 1.4rem;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0a9da36987bf80064d28cbc82789b7d9acbbe130
   .hero .left p {
     font-size: 1.5rem;
     width: 80%;
@@ -1201,7 +1210,11 @@ td img {
 .total-price {
   display: flex;
   align-items: flex-end;
+<<<<<<< HEAD
   flex-direction: row;
+=======
+  flex-direction: column;
+>>>>>>> 0a9da36987bf80064d28cbc82789b7d9acbbe130
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -1375,7 +1388,10 @@ th:last-child {
 .login-form form h1 {
   margin-bottom: 1rem;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0a9da36987bf80064d28cbc82789b7d9acbbe130
 .login-form form p {
   margin-bottom: 2rem;
 }
@@ -1416,4 +1432,8 @@ th:last-child {
 
 .login-form form p a {
   color: dodgerblue;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 0a9da36987bf80064d28cbc82789b7d9acbbe130

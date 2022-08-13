@@ -13,11 +13,17 @@ app.use(bodyParser.json())
 
 //to access css and images 
 app.use('/public', express.static('public'));
+<<<<<<< HEAD
+=======
+
+app.set("view engine","ejs")
+>>>>>>> 0a9da36987bf80064d28cbc82789b7d9acbbe130
 
 app.set("view engine", "ejs")
 
 const PORT = process.env.PORT || 3001
 
+<<<<<<< HEAD
 app.get('/', (req, res) => {
     res.render('HOME', {
         key: PUBLISHABLE_KEY
@@ -25,6 +31,9 @@ app.get('/', (req, res) => {
 })
 
 app.post('/payment', (req, res) => {
+=======
+app.post('/payment',(req,res) =>{
+>>>>>>> 0a9da36987bf80064d28cbc82789b7d9acbbe130
     stripe.customers.create({
         email: req.body.stripeEmail,
         source: req.body.stripeToken,
